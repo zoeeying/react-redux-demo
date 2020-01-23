@@ -10,7 +10,7 @@
 * 06_useReducer_demo，使用 useReducer 的计数器小案例。
 * 07_useReducer_useContext_demo，使用 useReducer 和 useContext 代替 redux 的小案例。
 
-把上面某个目录的名称改成 src，然后通过下面的命令启动该目录下的项目：
+把上面某个目录的名称改成 src，然后通过下面的命令启动项目：
 
 ```bash
 npm install
