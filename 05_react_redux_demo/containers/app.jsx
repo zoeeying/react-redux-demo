@@ -1,9 +1,9 @@
 import React from 'react'
-import CommentAdd from '../../components/comment-add/comment-add'
-import CommentList from '../../components/comment-list/comment-list'
+import CommentAdd from '../components/comment-add/comment-add'
+import CommentList from '../components/comment-list/comment-list'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { addComment, deleteComment, getComments } from '../../redux/actions'
+import { addComment, deleteComment, getComments } from '../redux/actions'
 
 
 class App extends React.Component {
@@ -15,13 +15,13 @@ class App extends React.Component {
     getComments: PropTypes.func.isRequired,
   }
 
-  componentDidMount() {
+  componentDidMount () {
     // 异步获取所有评论数组
     this.props.getComments()
   }
 
 
-  render() {
+  render () {
     const { comments, addComment, deleteComment } = this.props
     return (
       <div>
@@ -44,7 +44,7 @@ class App extends React.Component {
 }
 
 export default connect(
-  state => ({ comments: state.comments }), 
+  state => ({ comments: state.comments }),
   { addComment, deleteComment, getComments }
 )(App)
 

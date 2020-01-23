@@ -5,10 +5,6 @@ import './commentList.css'
 
 
 class CommentList extends React.Component {
-  constructor (props) {
-    super(props)
-  }
-
   render () {
     let comments = this.props.comments
     let display = comments.length > 0 ? 'none' : 'block'
@@ -20,7 +16,7 @@ class CommentList extends React.Component {
           {
             comments.map((comment, index) => {
               console.log(comment)
-              return <CommentItem comment={comment} key={index} index={index} delete={this.props.delete}/>
+              return <CommentItem comment={comment} key={index} index={index} delete={this.props.delete} />
             })
           }
         </ul>

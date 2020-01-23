@@ -36,7 +36,7 @@ export default class Counter extends Component {
     // }, 1000)
   }
 
-  render() {
+  render () {
     const { count } = this.props
 
     return (
